@@ -1,0 +1,31 @@
+html,
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, Sans-serif;
+  background-color: #2bbed3;
+  overflow: hidden;
+}
+
+a {
+  cursor: pointer;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.btn,
+.btn:focus {
+  outline: none !important;
+}
+
+.btn:active {
+  box-shadow: none;
+}
+
+.header {
+  width: 100%;
+  margin-bottom: 4vmin; 
+  font-size: 4vmin;
+  text-align: center;
+  color: white;
+}

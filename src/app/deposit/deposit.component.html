@@ -1,0 +1,54 @@
+<div class="deposit-container">
+  <div class="header">
+    <i (click)="onBack()" class="glyphicon glyphicon-download"></i>
+    <span>Depositing</span>
+  </div>
+  <div class="amount">
+    <span class="icon">&pound;</span>
+    <span class="value">{{amount}}</span>
+  </div>
+  <div class="list-container">
+    <ul class="list-unstyled">
+      <ng-container *ngFor="let noteType of noteTypes">
+        <li *ngIf="noteType.count !== 0" class="{{noteType.type}}-{{noteType.denomination}}">
+          <div class="{{noteType.type}}">
+            <div class="note-cavity">
+            </div>
+          </div>
+          <div class="money-count">
+            <span>{{noteType.count}} &times; {{noteType.denomination}}</span>
+          </div>
+        </li>
+      </ng-container>
+    </ul>
+    <ul class="list-unstyled">
+      <ng-container *ngFor="let coinType of coinTypesWithSizeGreaterThan20">
+        <li *ngIf="coinType.count !== 0" class="{{coinType.type}}-{{coinType.denomination}}">
+          <div class="{{coinType.type}}">
+            <div class="coin-circle">
+            </div>
+          </div>
+          <div class="money-count">
+            <span>{{coinType.count}} &times; {{coinType.denomination}}</span>
+          </div>
+        </li>
+      </ng-container>
+    </ul>
+    <ul class="list-unstyled">
+      <ng-container *ngFor="let coinType of coinTypesWithSizeLessThanEqual20">
+        <li *ngIf="coinType.count !== 0" class="{{coinType.type}}-{{coinType.denomination}}">
+          <div class="{{coinType.type}}">
+            <div class="coin-circle">
+            </div>
+          </div>
+          <div class="money-count">
+            <span>{{coinType.count}} &times; {{coinType.denomination}}</span>
+          </div>
+        </li>
+      </ng-container>
+    </ul>
+  </div>
+  <div class="text-center">
+      Thank you for using<br>e ATM
+  </div>
+</div>
